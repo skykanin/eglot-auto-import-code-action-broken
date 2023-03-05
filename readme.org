@@ -5,6 +5,9 @@
 - ghc version: 9.0.2
 - haskell language server version: 1.8.0.0
 - OS: macOS (Intel), version 12.6.2
+- nix-channel: nixpkgs-unstable
+- ~nix-instantiate --eval -E '(import <nixpkgs> {}).lib.version'~:
+  > "23.05pre436403.ba6ba2b9009"
 
 Reproduction steps:
 
