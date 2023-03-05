@@ -1,0 +1,17 @@
+#+title: No auto-imports code action with eglot
+
+- emacs version: 28.2, native comp
+- doom version: 3.0.0-pre
+- ghc version: 9.0.2
+- haskell language server version: 1.8.0.0
+- OS: macOS (Intel), version 12.6.2
+
+Reproduction steps:
+
+- Open [[file:app/Scratch.hs::main = List.intercalate ", " \["Lorem", "ipsum", "dolor"\]][app/Scratch.hs]]
+- Run ~'eglot~
+- Enter “nix-shell --run "haskell-language-server-wrapper --lsp"” at the minibuffer prompt
+- Move point to “List.intercalate”
+- Run ~'eglot-code-actions~
+
+At this point I see “[eglot] No code actions here” in the minibuffer, when I expect to be offered options to add an import automatically for List.
