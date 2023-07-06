@@ -1,11 +1,11 @@
-cabal-version:      2.4
+cabal-version:      3.8
 name:               scratch
 version:            1.0.3-wip
 synopsis:           An implementation of the card game Hearts
 license:            GPL-3.0-or-later
-author:             Emily Bourke
-copyright:          Emily Bourke
-maintainer:         undergroundquizscene@protonmail.com
+author:             -
+copyright:          -
+maintainer:         -
 
 extra-source-files:
 
@@ -20,4 +20,4 @@ executable scratch
                -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base,
-  default-language: Haskell2010
+  default-language: GHC2021 

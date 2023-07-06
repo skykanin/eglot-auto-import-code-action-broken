@@ -2,10 +2,10 @@
 
 - emacs version: 28.2, native comp
 - doom version: 3.0.0-pre
-- ghc version: 9.0.2
-- haskell language server version: 1.8.0.0
-- OS: macOS (Intel), version 12.6.2
-- nix-channel: nixpkgs-unstable
+- ghc version: 9.4.5
+- haskell language server version: 1.10.0.0
+- OS: GNU/Linux 6.4.0, NixOS, 23.11 (Tapir), 23.11.20230701.645ff62
+- nix-channel: nixos-unstable
 - ~nix-instantiate --eval -E '(import <nixpkgs> {}).lib.version'~:
   > "23.05pre436403.ba6ba2b9009"
 

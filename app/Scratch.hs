@@ -1,2 +1,4 @@
-module Scratch where
-main = List.intercalate ", " ["Lorem", "ipsum", "dolor"]
+module Main where
+
+main :: IO ()
+main = print $ List.intercalate ", " ["Lorem", "ipsum", "dolor"]
