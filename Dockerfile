@@ -11,7 +11,7 @@ RUN curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/
 ENV PATH="${PATH}:/nix/var/nix/profiles/default/bin"
 
 # Install cachix
-RUN nix profile install github:cachix/cachix/latest
+RUN nix profile install "nixpkgs#cachix"
 ENV USER="$USER"
 USER "$USER"
 WORKDIR "/home/$USER"
