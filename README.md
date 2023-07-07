@@ -24,7 +24,6 @@ Reproduction steps:
 
 - Open [[file:app/Scratch.hs::main = List.intercalate ", " \["Lorem", "ipsum", "dolor"\]][app/Scratch.hs]]
 - Run `eglot`
-- Enter “nix-shell --run "haskell-language-server-wrapper --lsp"” at the minibuffer prompt
 - Move point to “List.intercalate”
 - Run `eglot-code-actions`
 
