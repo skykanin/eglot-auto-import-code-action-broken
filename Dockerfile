@@ -16,6 +16,6 @@ ENV USER="$USER"
 USER "$USER"
 WORKDIR "/home/$USER"
 # Configure cachix cache for nix dev shell
-cachix use haskell-dev-shell
+RUN cachix use haskell-dev-shell
 # Keep container alive since we want to use it for our devel environment
 CMD sleep infinity
