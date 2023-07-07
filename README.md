@@ -11,25 +11,21 @@
 
 Reproduction steps:
 
+- Import docker image
+# TODO: Put docker commands here
+- docker run ...
+
+- Configure eglot to use `haskell-language-server` from docker image:
+  ```
+  (with-eval-after-load 'eglot
+  (add-to-list 'eglot-server-programs
+               `(c++-mode . ("clangd" "--compile-commands-dir=/tmp"))))
+  ```
+
 - Open [[file:app/Scratch.hs::main = List.intercalate ", " \["Lorem", "ipsum", "dolor"\]][app/Scratch.hs]]
-- Run ~'eglot~
+- Run `eglot`
 - Enter “nix-shell --run "haskell-language-server-wrapper --lsp"” at the minibuffer prompt
 - Move point to “List.intercalate”
-- Run ~'eglot-code-actions~
+- Run `eglot-code-actions`
 
 At this point I see “[eglot] No code actions here” in the minibuffer, when I expect to be offered options to add an import automatically for List.
-
-* Example Code Action
-
-#+begin_src emacs-lisp
-(:textDocument
-           (:uri "file:///Users/Emily/Desktop/scratch/app/Scratch.hs")
-           :range
-           (:start
-            (:line 1 :character 7)
-            :end
-            (:line 1 :character 7))
-           :context
-           (:diagnostics
-            []))
-#+end_src

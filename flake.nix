@@ -25,12 +25,9 @@
           hlib = pkgs.haskell.lib;
           # Haskell and shell tooling
           tools = with hpkgs; [
-            haskell-language-server
-            ghc
             cabal-install
-            cabal-plan
-            (hlib.dontCheck ghcid)
-            (hlib.dontCheck fourmolu)
+            ghc
+            haskell-language-server
           ];
           # System libraries that need to be symlinked
           libraries = with pkgs; [ ];
@@ -44,5 +41,11 @@
           LD_LIBRARY_PATH = libraryPath;
           LIBRARY_PATH = libraryPath;
         };
-    });
+    }) // {
+      nixConfig = {
+        # Configure cachix cache as chosen GHC version is not cached in nixpkgs
+        extra-substituers = [ "https://haskell-dev-shell.cachix.org" ];
+        extra-trusted-public-keys = [ "haskell-dev-shell.cachix.org-1:drFpU0pMVRoyEj4VXocwIvycjEEY6z5Hh18CrkVz+ZM=" ];
+      };
+    };
 }
