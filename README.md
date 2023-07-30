@@ -2,6 +2,7 @@
 
 - emacs version: 28.2, native comp
 - doom version: 3.0.0-pre
+- eglot commit: 8b5532dd32b25276c1857508030b207f765ef9b6
 - ghc version: 9.4.5
 - haskell language server version: 1.10.0.0
 - OS: GNU/Linux Alpine:latest
@@ -14,7 +15,7 @@ a linux distro using the X11 window system.
 
 ## Reproduction steps
 
-- Import docker image
+- Download the `repro-image.tar.gz` file from the release section of the github repository then import the docker image.
 
 ```sh
 docker load < repro-image.tar.gz
