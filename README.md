@@ -1,4 +1,4 @@
-#+title: No auto-imports code action with eglot
+# No auto-imports code action with eglot
 
 - emacs version: 28.2, native comp
 - doom version: 3.0.0-pre
@@ -7,7 +7,12 @@
 - OS: GNU/Linux Alpine:latest
 - nixpkgs channel: nixpkgs-unstable
 
-Reproduction steps:
+## Requirements
+
+To use the provided docker image you need to be running on
+a linux distro using the X11 window system.
+
+## Reproduction steps
 
 - Import docker image
 
