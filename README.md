@@ -14,7 +14,7 @@ a linux distro using the X11 window system.
 
 ## Reproduction steps
 
-- Import docker image
+- Download the `repro-image.tar.gz` file from the release section of the github repository then import the docker image.
 
 ```sh
 docker load < repro-image.tar.gz
