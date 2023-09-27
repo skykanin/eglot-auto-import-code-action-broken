@@ -8,6 +8,11 @@
 - OS: GNU/Linux Alpine:latest
 - nixpkgs channel: nixpkgs-unstable
 
+## Video
+Calling the `eglot-code-actions` functions returns "No code actions here" even though there should be code actions.
+
+https://github.com/skykanin/eglot-auto-import-code-action-broken/assets/3789764/dbdf16ef-c187-4e80-90e9-929f0c3184df
+
 ## Requirements
 
 To use the provided docker image you need to be running on
